@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Javascriptの記法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sunlight-highlighter/sunlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/site.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="javascript.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="javascript.html">
+            
+                <a href="javascript.html">
+            
+                    
+                    Javascriptとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    Javascriptの記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Javascriptの記法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><ul>
+<li><div><a href="#script-&#x8981;&#x7D20;">script &#x8981;&#x7D20;</a><i></i></div></li>
+<li><div><a href="#script-&#x8981;&#x7D20;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x5834;&#x6240;">script &#x8981;&#x7D20;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x5834;&#x6240;</a><i></i></div></li>
+<li><div><a href="#&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5206;&#x5272;">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5206;&#x5272;</a><i></i></div></li>
+<li><div><a href="#&#x69CB;&#x6587;&#x306E;&#x30EB;&#x30FC;&#x30EB;">&#x69CB;&#x6587;&#x306E;&#x30EB;&#x30FC;&#x30EB;</a><i></i></div></li>
+<li><div><a href="#&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x306E;&#x66F8;&#x304D;&#x65B9;">&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x306E;&#x66F8;&#x304D;&#x65B9;</a><i></i></div></li>
+<li><div><a href="#&#x5909;&#x6570;">&#x5909;&#x6570;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#let&#x547D;&#x4EE4;&#x3068;var&#x547D;&#x4EE4;&#x306E;&#x9055;&#x3044;">let&#x547D;&#x4EE4;&#x3068;var&#x547D;&#x4EE4;&#x306E;&#x9055;&#x3044;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x5B9A;&#x6570;">&#x5B9A;&#x6570;</a><i></i></div></li>
+<li><div><a href="#&#x914D;&#x5217;">&#x914D;&#x5217;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x591A;&#x6B21;&#x5143;&#x914D;&#x5217;">&#x591A;&#x6B21;&#x5143;&#x914D;&#x5217;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x30CF;&#x30C3;&#x30B7;&#x30E5;">&#x30CF;&#x30C3;&#x30B7;&#x30E5;</a><i></i></div></li>
+<li><div><a href="#&#x914D;&#x5217;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x914D;&#x5217;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</a><i></i></div></li>
+<li><div><a href="#&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5165;&#x308C;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x5165;&#x308C;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="script-&#x8981;&#x7D20;">script &#x8981;&#x7D20;</h1>
+<ul>
+<li>JavaScript&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x57CB;&#x3081;&#x8FBC;&#x3080;&#x305F;&#x3081;&#x306E;&#x8981;&#x7D20;</li>
+<li>HTML5&#x3067;&#x306F;<code>type=&quot;text/javascript&quot;</code>&#x306F;&#x4E0D;&#x8981;</li>
+</ul>
+<pre><code class="lang-html+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-1-line-1" href="#sunlight-1-line-1">1</a>
+<a name="sunlight-1-line-2" href="#sunlight-1-line-2">2</a>
+<a name="sunlight-1-line-3" href="#sunlight-1-line-3">3</a>
+</div><pre class="sunlight-highlight-xml sunlight-highlighted"><span class="sunlight-xml"><span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">script</span>&#xA0;<span class="sunlight-attribute">type</span><span class="sunlight-operator">=</span><span class="sunlight-string">&quot;text/javascript&quot;</span><span class="sunlight-operator">&gt;</span></span><span class="sunlight-javascript">
+&#xA0;&#xA0;&#xA0;&#xA0;<span class="sunlight-ident">window</span><span class="sunlight-operator">.</span><span class="sunlight-ident">alert</span><span class="sunlight-punctuation">(</span><span class="sunlight-string">&quot;Hello!&quot;</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span></span><span class="sunlight-xml">
+<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">script</span><span class="sunlight-operator">&gt;</span>
+</span></pre></div></div></code></pre>
+<h1 id="script-&#x8981;&#x7D20;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x5834;&#x6240;">script &#x8981;&#x7D20;&#x3092;&#x8A18;&#x8FF0;&#x3059;&#x308B;&#x5834;&#x6240;</h1>
+<ul>
+<li><p>body &#x8981;&#x7D20;&#x306E;&#x7D42;&#x4E86;&#x30BF;&#x30B0;&#x76F4;&#x524D;<br>&#x4E00;&#x822C;&#x7684;&#x306A;&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x3067;&#x306F;&#x3001;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x306E;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x3084;&#x5B9F;&#x884C;&#x4E2D;&#x306F;&#x63CF;&#x753B;&#x3055;&#x308C;&#x306A;&#x3044;.<br>&#x3053;&#x306E;&#x305F;&#x3081;&#x3001;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x63CF;&#x753B;&#x3092;&#x7D42;&#x3048;&#x305F;&#x5F8C;&#x306B;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;.</p>
+</li>
+<li><p>head &#x8981;&#x7D20;&#x306E;&#x914D;&#x4E0B;<br>JavaScript&#x3067;&#x95A2;&#x6570;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x5834;&#x5408;&#x3001;&#x95A2;&#x6570;&#x5B9A;&#x7FA9;&#x306E;script&#x8981;&#x7D20;&#x3092;&#x5148;&#x306B;&#x547C;&#x3073;&#x51FA;&#x3059;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;.<br>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x5834;&#x5408;&#x3001;head&#x8981;&#x7D20;&#x3067;&#x4E8B;&#x524D;&#x306B;&#x8AAD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x304A;&#x304F;.<br>&#x307E;&#x305F;&#x3001;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x304B;&#x3089;css&#x3092;&#x51FA;&#x529B;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x5834;&#x5408;&#x3082;head&#x8981;&#x7D20;&#x306E;&#x914D;&#x4E0B;&#x306B;&#x914D;&#x7F6E;&#x3059;&#x308B;.</p>
+</li>
+</ul>
+<h1 id="&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5206;&#x5272;">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5206;&#x5272;</h1>
+<p>JavaScript&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3068;HTML&#x306F;&#x5206;&#x5272;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;.<br>&#x4EE5;&#x4E0B;&#x306E;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x3067;&#x306F;&#x3001;.html&#x3068;.js&#x304C;&#x540C;&#x968E;&#x5C64;&#x306B;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;.<br>main.html&#x306E;8&#x884C;&#x76EE;&#x3067;.js&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x308B;.  </p>
+<ul>
+<li>main.html  <pre><code class="lang-html+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-2-line-1" href="#sunlight-2-line-1">1</a>
+<a name="sunlight-2-line-2" href="#sunlight-2-line-2">2</a>
+<a name="sunlight-2-line-3" href="#sunlight-2-line-3">3</a>
+<a name="sunlight-2-line-4" href="#sunlight-2-line-4">4</a>
+<a name="sunlight-2-line-5" href="#sunlight-2-line-5">5</a>
+<a name="sunlight-2-line-6" href="#sunlight-2-line-6">6</a>
+<a name="sunlight-2-line-7" href="#sunlight-2-line-7">7</a>
+<a name="sunlight-2-line-8" href="#sunlight-2-line-8">8</a>
+<a name="sunlight-2-line-9" href="#sunlight-2-line-9">9</a>
+<a name="sunlight-2-line-10" href="#sunlight-2-line-10">10</a>
+<a name="sunlight-2-line-11" href="#sunlight-2-line-11">11</a>
+</div><pre class="sunlight-highlight-xml sunlight-highlighted"><span class="sunlight-xml"><span class="sunlight-doctype">&lt;!DOCTYPE&#xA0;html&gt;</span>
+<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">html</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">head</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">meta</span>&#xA0;<span class="sunlight-attribute">charset</span><span class="sunlight-operator">=</span><span class="sunlight-string">&quot;utf-8&quot;</span>&#xA0;<span class="sunlight-operator">/&gt;</span>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">title</span><span class="sunlight-operator">&gt;</span>Hello&#xA0;world<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">title</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">head</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">body</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">script</span>&#xA0;<span class="sunlight-attribute">type</span><span class="sunlight-operator">=</span><span class="sunlight-string">&quot;text/javascript&quot;</span>&#xA0;<span class="sunlight-attribute">src</span><span class="sunlight-operator">=</span><span class="sunlight-string">&quot;sample.js&quot;</span><span class="sunlight-operator">&gt;</span><span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">script</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;<span class="sunlight-operator">&lt;</span><span class="sunlight-tagName">noscript</span><span class="sunlight-operator">&gt;</span>JavaScrip&#x304C;&#x4F7F;&#x7528;&#x51FA;&#x6765;&#x307E;&#x305B;&#x3093;<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">noscript</span><span class="sunlight-operator">&gt;</span>
+&#xA0;&#xA0;<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">body</span><span class="sunlight-operator">&gt;</span>
+<span class="sunlight-operator">&lt;/</span><span class="sunlight-tagName">html</span><span class="sunlight-operator">&gt;</span>
+</span></pre></div></div></code></pre>
+</li>
+<li>sample.js  <pre><code class="lang-html+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-3-line-1" href="#sunlight-3-line-1">1</a>
+</div><pre class="sunlight-highlight-xml sunlight-highlighted"><span class="sunlight-xml">window.alert(&quot;Hello&#xA0;world!&quot;)
+</span></pre></div></div></code></pre>
+</li>
+</ul>
+<h1 id="&#x69CB;&#x6587;&#x306E;&#x30EB;&#x30FC;&#x30EB;">&#x69CB;&#x6587;&#x306E;&#x30EB;&#x30FC;&#x30EB;</h1>
+<ul>
+<li>&#x6587;&#x672B;&#x306B;&#x306F;&#x30BB;&#x30DF;&#x30B3;&#x30ED;&#x30F3;&#x304C;&#x5FC5;&#x8981;</li>
+<li>&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x9014;&#x4E2D;&#x3067;&#x3082;&#x7A7A;&#x767D;&#x3084;&#x6539;&#x884C;&#x3092;&#x5165;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;</li>
+</ul>
+<h1 id="&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x306E;&#x66F8;&#x304D;&#x65B9;">&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x306E;&#x66F8;&#x304D;&#x65B9;</h1>
+<ul>
+<li>&#x5358;&#x4E00;&#x306E;&#x5834;&#x5408; //</li>
+<li>&#x8907;&#x6570;&#x884C;&#x306E;&#x5834;&#x5408; /* */</li>
+</ul>
+<h1 id="&#x5909;&#x6570;">&#x5909;&#x6570;</h1>
+<p>ES6&#x3067;&#x306F;&#x3001;let&#x547D;&#x4EE4;&#x3092;&#x4F7F;&#x3046;.</p>
+<pre><code> let msg;
+ let msg=&apos;hello&apos;;
+</code></pre><h2 id="let&#x547D;&#x4EE4;&#x3068;var&#x547D;&#x4EE4;&#x306E;&#x9055;&#x3044;">let&#x547D;&#x4EE4;&#x3068;var&#x547D;&#x4EE4;&#x306E;&#x9055;&#x3044;</h2>
+<ul>
+<li>var&#x547D;&#x4EE4;&#x3067;&#x306F;&#x5909;&#x6570;&#x306E;&#x91CD;&#x8907;&#x304C;&#x8A31;&#x53EF;&#x3055;&#x308C;&#x308B;</li>
+</ul>
+<pre><code> var msg=&apos;abc&apos;;
+ var msg=&apos;hello&apos;;
+</code></pre><h1 id="&#x5B9A;&#x6570;">&#x5B9A;&#x6570;</h1>
+<p>const&#x547D;&#x4EE4;&#x3092;&#x4F7F;&#x3046;.</p>
+<pre><code> const NAME=&apos;Joe&apos;;
+</code></pre><h1 id="&#x914D;&#x5217;">&#x914D;&#x5217;</h1>
+<p>&#x30D6;&#x30E9;&#x30F3;&#x30B1;&#x30C3;&#x30C8;&#x3067;&#x56F2;&#x3080;&#x3068;&#x914D;&#x5217;&#x3068;&#x3057;&#x3066;&#x6271;&#x308F;&#x308C;&#x308B;.<br>Chrome&#x3060;&#x3068;&#x3001;&#x30C7;&#x30D9;&#x30ED;&#x30C3;&#x30D1;&#x30FC;&#x30C4;&#x30FC;&#x30EB;&#x306E;Cosole&#x30BF;&#x30D6;&#x3067;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x51FA;&#x6765;&#x308B;.</p>
+<pre><code> let data=[&apos;Joe&apos;, &apos;Bob&apos;, &apos;Jhn&apos;];
+ console.log(data[1]);
+ &gt; Bob
+</code></pre><h2 id="&#x591A;&#x6B21;&#x5143;&#x914D;&#x5217;">&#x591A;&#x6B21;&#x5143;&#x914D;&#x5217;</h2>
+<p>&#x30D6;&#x30E9;&#x30F3;&#x30B1;&#x30C3;&#x30C8;&#x3092;&#x5165;&#x308C;&#x5B50;&#x306B;&#x3059;&#x308B;&#x3068;&#x591A;&#x6B21;&#x5143;&#x914D;&#x5217;&#x3068;&#x3057;&#x3066;&#x6271;&#x308F;&#x308C;&#x308B;.</p>
+<pre><code> let data=[&apos;Joe&apos;, [&apos;Bob&apos;, &apos;Alan&apos;], &apos;Jhn&apos;];
+ console.log(name[0]);
+ &gt;Joe
+ console.log(name[1][0]);
+ &gt;Bob
+ console.log(name[1][1]);
+ &gt;Alan
+ console.log(name[0][0]);
+ &gt;J &lt;= Joe&#x306E;&#x4E00;&#x6587;&#x5B57;&#x76EE;&#x304C;&#x51FA;&#x529B;&#x3055;&#x308C;&#x305F;. &#x3053;&#x3053;&#x306E;&#x52D5;&#x304D;&#x306F;&#x3057;&#x3063;&#x304F;&#x308A;&#x3053;&#x306A;&#x304B;&#x3063;&#x305F;.
+</code></pre><h1 id="&#x30CF;&#x30C3;&#x30B7;&#x30E5;">&#x30CF;&#x30C3;&#x30B7;&#x30E5;</h1>
+<p>&#x4E2D;&#x62EC;&#x5F27;&#x3067;&#x56F2;&#x3080;&#x3068;&#x30CF;&#x30C3;&#x30B7;&#x30E5;&#x3068;&#x3057;&#x3066;&#x6271;&#x308F;&#x308C;&#x308B;.</p>
+<pre><code> {&#x30AD;&#x30FC;&#x540D;:&#x5024;, &#x30AD;&#x30FC;&#x540D;:&#x5024;, ...}
+</code></pre><pre><code> let nameAge = {Joe:41, Bob:21, Alan:35};
+ console.log(nameAge.Alan);
+ &gt; 35
+</code></pre><p>&#x30CF;&#x30C3;&#x30B7;&#x30E5;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x306F;&#x3001;&#x30C9;&#x30C3;&#x30C8;&#x3068;&#x30D6;&#x30E9;&#x30F3;&#x30B1;&#x30C3;&#x30C8;&#x306E;2&#x3064;&#x304C;&#x3042;&#x308B;.<br>&#x4F8B;&#x3048;&#x3070;&#x3001;&#x30AD;&#x30FC;&#x5024;&#x304C;&#x6570;&#x5B57;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x30C9;&#x30C3;&#x30C8;&#x3067;&#x306F;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x51FA;&#x6765;&#x306A;&#x3044;,<br>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x5834;&#x5408;&#x306B;&#x306F;&#x30D6;&#x30E9;&#x30F3;&#x30B1;&#x30C3;&#x30C8;&#x3067;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;.</p>
+<pre><code> let d = {100:&apos;apple&apos;, 200:orange};
+ console.log(d[&apos;100&apos;]);
+ &gt; &quot;apple&quot;
+ console.log(d.100);
+ &gt; &#x30A8;&#x30E9;&#x30FC;&#x306B;&#x306A;&#x308B;.
+</code></pre><h1 id="&#x914D;&#x5217;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x914D;&#x5217;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</h1>
+<p>ES6&#x3067;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x6A5F;&#x80FD;.<br>2&#x884C;&#x76EE;&#x3067;&#x5DE6;&#x8FBA;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30B1;&#x30C3;&#x30C8;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x4EE3;&#x5165;&#x3057;&#x3066;&#x3044;&#x308B;&#x3068;&#x3053;&#x308D;&#x304C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;.<br>&#x3053;&#x308C;&#x3067;&#x5404;&#x5909;&#x6570;&#x306B;&#x4EE3;&#x5165;&#x304C;&#x53EF;&#x80FD;.</p>
+<pre><code class="lang-c+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-4-line-1" href="#sunlight-4-line-1">1</a>
+<a name="sunlight-4-line-2" href="#sunlight-4-line-2">2</a>
+<a name="sunlight-4-line-3" href="#sunlight-4-line-3">3</a>
+<a name="sunlight-4-line-4" href="#sunlight-4-line-4">4</a>
+<a name="sunlight-4-line-5" href="#sunlight-4-line-5">5</a>
+<a name="sunlight-4-line-6" href="#sunlight-4-line-6">6</a>
+</div><pre class="sunlight-highlight-cpp sunlight-highlighted"><span class="sunlight-cpp">&#xA0;<span class="sunlight-named-ident">let</span>&#xA0;<span class="sunlight-ident">data</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-punctuation">[</span><span class="sunlight-number">10</span><span class="sunlight-operator">,</span><span class="sunlight-number">20</span><span class="sunlight-operator">,</span><span class="sunlight-number">30</span><span class="sunlight-operator">,</span><span class="sunlight-number">40</span><span class="sunlight-operator">,</span><span class="sunlight-number">50</span><span class="sunlight-punctuation">]</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">let</span>&#xA0;<span class="sunlight-punctuation">[</span><span class="sunlight-ident">a</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">b</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">c</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">d</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">e</span><span class="sunlight-punctuation">]</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-ident">data</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">a</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">10</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">e</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">50</span>
+</span></pre></div></div></code></pre>
+<p>&#x300C;...&#x300D;&#x6F14;&#x7B97;&#x5B50;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x3001;&#x9762;&#x767D;&#x3044;.</p>
+<pre><code class="lang-c+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-5-line-1" href="#sunlight-5-line-1">1</a>
+<a name="sunlight-5-line-2" href="#sunlight-5-line-2">2</a>
+<a name="sunlight-5-line-3" href="#sunlight-5-line-3">3</a>
+<a name="sunlight-5-line-4" href="#sunlight-5-line-4">4</a>
+<a name="sunlight-5-line-5" href="#sunlight-5-line-5">5</a>
+<a name="sunlight-5-line-6" href="#sunlight-5-line-6">6</a>
+</div><pre class="sunlight-highlight-cpp sunlight-highlighted"><span class="sunlight-cpp">&#xA0;<span class="sunlight-named-ident">let</span>&#xA0;<span class="sunlight-ident">data</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-punctuation">[</span><span class="sunlight-number">10</span><span class="sunlight-operator">,</span><span class="sunlight-number">20</span><span class="sunlight-operator">,</span><span class="sunlight-number">30</span><span class="sunlight-operator">,</span><span class="sunlight-number">40</span><span class="sunlight-operator">,</span><span class="sunlight-number">50</span><span class="sunlight-punctuation">]</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">let</span>&#xA0;<span class="sunlight-punctuation">[</span><span class="sunlight-ident">x</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">y</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ellipsis">...</span><span class="sunlight-ident">other</span><span class="sunlight-punctuation">]</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-ident">data</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">x</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">10</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">other</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-punctuation">[</span><span class="sunlight-number">30</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-number">40</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-number">50</span><span class="sunlight-punctuation">]</span>
+</span></pre></div></div></code></pre>
+<h1 id="&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</h1>
+<p>ES6&#x3067;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x6A5F;&#x80FD;.<br>2&#x884C;&#x76EE;&#x3067;&#x5DE6;&#x8FBA;&#x306E;&#x4E2D;&#x62EC;&#x5F27;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x4EE3;&#x5165;&#x3057;&#x3066;&#x3044;&#x308B;&#x3068;&#x3053;&#x308D;&#x304C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;.<br>&#x3053;&#x308C;&#x3067;&#x5404;&#x5909;&#x6570;&#x306B;&#x4EE3;&#x5165;&#x304C;&#x53EF;&#x80FD;.</p>
+<p>&#x540D;&#x524D;&#x3067;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x3092;&#x5206;&#x5272;&#x3067;&#x304D;&#x308B;.
+&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306E;&#x5B9A;&#x7FA9;&#x9806;&#x306E;&#x9055;&#x3044;(&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;title&#x3068;isbn)&#x3084;&#x3001;<br>&#x5206;&#x5272;&#x3057;&#x306A;&#x3044;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x3042;&#x3063;&#x3066;&#x3082;&#x30A8;&#x30E9;&#x30FC;&#x3068;&#x306A;&#x3089;&#x306A;&#x3044;(&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;price).</p>
+<p>&#x307E;&#x305F;&#x3001;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5024;&#x3092;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x308B;.<br>&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;test&#x304C;&#x53F3;&#x8FBA;&#x306B;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x304C;&#x3001;6&#x884C;&#x76EE;&#x3067;&#x5DE6;&#x8FBA;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5024;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;.</p>
+<pre><code class="lang-c+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-6-line-1" href="#sunlight-6-line-1">1</a>
+<a name="sunlight-6-line-2" href="#sunlight-6-line-2">2</a>
+<a name="sunlight-6-line-3" href="#sunlight-6-line-3">3</a>
+<a name="sunlight-6-line-4" href="#sunlight-6-line-4">4</a>
+<a name="sunlight-6-line-5" href="#sunlight-6-line-5">5</a>
+<a name="sunlight-6-line-6" href="#sunlight-6-line-6">6</a>
+</div><pre class="sunlight-highlight-cpp sunlight-highlighted"><span class="sunlight-cpp">&#xA0;<span class="sunlight-named-ident">let</span>&#xA0;<span class="sunlight-ident">book</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-punctuation">{</span><span class="sunlight-ident">title</span><span class="sunlight-operator">:</span><span class="sunlight-char">&apos;AAA&apos;</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">price</span><span class="sunlight-operator">:</span><span class="sunlight-number">1000</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">isbn</span><span class="sunlight-operator">:</span><span class="sunlight-number">12345</span><span class="sunlight-punctuation">}</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">let</span>&#xA0;<span class="sunlight-punctuation">{</span><span class="sunlight-ident">isbn</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">title</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">test</span><span class="sunlight-operator">=</span><span class="sunlight-char">&apos;hoge&apos;</span><span class="sunlight-punctuation">}</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-ident">book</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">isbn</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">12345</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">test</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-char">&apos;hoge&apos;</span>
+</span></pre></div></div></code></pre>
+<h2 id="&#x5165;&#x308C;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;">&#x5165;&#x308C;&#x5B50;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x5206;&#x5272;&#x4EE3;&#x5165;</h2>
+<p>&#x5165;&#x308C;&#x5B50;&#x306E;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3082;&#x5206;&#x5272;&#x4EE3;&#x5165;&#x3067;&#x304D;&#x308B;.</p>
+<pre><code class="lang-c+theme:dark+lineNumbers:true"><div class="sunlight-container sunlight-theme-dark"><div class="sunlight-code-container" style="border-width: 1px; border-style: solid;"><div class="sunlight-line-number-margin"><a name="sunlight-7-line-1" href="#sunlight-7-line-1">1</a>
+<a name="sunlight-7-line-2" href="#sunlight-7-line-2">2</a>
+<a name="sunlight-7-line-3" href="#sunlight-7-line-3">3</a>
+<a name="sunlight-7-line-4" href="#sunlight-7-line-4">4</a>
+<a name="sunlight-7-line-5" href="#sunlight-7-line-5">5</a>
+<a name="sunlight-7-line-6" href="#sunlight-7-line-6">6</a>
+<a name="sunlight-7-line-7" href="#sunlight-7-line-7">7</a>
+<a name="sunlight-7-line-8" href="#sunlight-7-line-8">8</a>
+</div><pre class="sunlight-highlight-cpp sunlight-highlighted"><span class="sunlight-cpp">&#xA0;<span class="sunlight-named-ident">let</span>&#xA0;<span class="sunlight-ident">book</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-punctuation">{</span><span class="sunlight-ident">title</span><span class="sunlight-operator">:</span><span class="sunlight-char">&apos;AAA&apos;</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">price</span><span class="sunlight-operator">:</span><span class="sunlight-number">1000</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">isbn</span><span class="sunlight-operator">:</span><span class="sunlight-number">12345</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">data</span><span class="sunlight-operator">:</span><span class="sunlight-punctuation">{</span><span class="sunlight-ident">name</span><span class="sunlight-operator">:</span><span class="sunlight-char">&apos;joe&apos;</span><span class="sunlight-operator">,</span><span class="sunlight-ident">age</span><span class="sunlight-operator">:</span><span class="sunlight-number">99</span><span class="sunlight-punctuation">}</span><span class="sunlight-punctuation">}</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">let</span>&#xA0;<span class="sunlight-punctuation">{</span><span class="sunlight-ident">price</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">data</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">data</span><span class="sunlight-operator">:</span><span class="sunlight-punctuation">{</span><span class="sunlight-ident">age</span><span class="sunlight-punctuation">}</span><span class="sunlight-punctuation">}</span>&#xA0;<span class="sunlight-operator">=</span>&#xA0;<span class="sunlight-ident">book</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">price</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">1000</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">data</span><span class="sunlight-punctuation">)</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-punctuation">{</span><span class="sunlight-ident">name</span><span class="sunlight-operator">:</span><span class="sunlight-char">&apos;joe&apos;</span><span class="sunlight-operator">,</span>&#xA0;<span class="sunlight-ident">age</span><span class="sunlight-operator">:</span><span class="sunlight-number">99</span><span class="sunlight-punctuation">}</span>
+&#xA0;<span class="sunlight-ident">console</span><span class="sunlight-operator">.</span><span class="sunlight-ident">log</span><span class="sunlight-punctuation">(</span><span class="sunlight-ident">age</span><span class="sunlight-punctuation">)</span><span class="sunlight-punctuation">;</span>
+&#xA0;<span class="sunlight-operator">&gt;</span>&#xA0;<span class="sunlight-number">99</span>
+</span></pre></div></div></code></pre>
+<ul>
+<li>&#x30E1;&#x30E2;<br>&#x4E0A;&#x8A18;&#x306E;2&#x884C;&#x76EE;&#x306E;2&#x756A;&#x76EE;&#x306E;data&#x304C;&#x306A;&#x304F;&#x3066;&#x3082;,6&#x884C;&#x76EE;&#x306E;data&#x306F;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x3044;&#x304B;&#x3068;&#x601D;&#x3063;&#x305F;&#x304C;&#x3001;<br>2&#x756A;&#x76EE;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x304C;&#x306A;&#x3044;&#x3068;&#x3001;<code>console.log(data)</code>&#x306F;&#x30A8;&#x30E9;&#x30FC;&#x3068;&#x306A;&#x3063;&#x305F;.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="javascript.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Javascriptとは">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Javascriptの記法","level":"1.2.2","depth":2,"previous":{"title":"Javascriptとは","level":"1.2.1","depth":2,"path":"memo/javascript/javascript.md","ref":"memo/javascript/javascript.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hide-published-with","-sharing","page-treeview","expand-active-chapter","back-to-top-button","expand-active-chapter","sunlight-highlighter","-highlight"],"styles":{"website":"styles/site.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"2","minHeaderDeep":"2"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"sunlightHighlighter":{"theme":"dark","lineNumbers":true},"expand-active-chapter":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"sunlight-highlighter":{"lineNumbers":false,"theme":"gitbook"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"memo/javascript/notation.md","mtime":"2020-01-12T17:56:22.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-13T15:39:11.281Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
